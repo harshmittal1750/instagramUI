@@ -18,7 +18,9 @@ class Post extends StatelessWidget {
               ],
             ),
           ),
-          Row(),
+          Container(
+            child: Image.asset("assets/images/post1.jpg"),
+          ),
           Row(),
           Row(),
         ],
