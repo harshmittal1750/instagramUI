@@ -19,10 +19,62 @@ class Post extends StatelessWidget {
             ),
           ),
           Container(
-            child: Image.asset("assets/images/post1.jpg"),
+            child: Image.asset(
+              "assets/images/post1.jpg",
+              width: double.infinity,
+              height: 345,
+              fit: BoxFit.fitWidth,
+            ),
           ),
-          Row(),
-          Row(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.favorite),
+                    Icon(Icons.comment),
+                    Icon(Icons.send),
+                  ],
+                ),
+              ),
+              Icon(Icons.download),
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: (Row(
+                        children: [
+                          Container(child: Icon(Icons.circle)),
+                          Container(
+                              transform:
+                                  Matrix4.translationValues(-10.0, 00.0, 0.0),
+                              child: Icon(Icons.circle)),
+                          Container(
+                              transform:
+                                  Matrix4.translationValues(-20.0, 0.0, 0.0),
+                              child: Icon(Icons.circle)),
+                        ],
+                      )),
+                    ),
+                    Container(
+                      child: (Row(
+                        children: [
+                          Text("Liked by me and you"),
+                        ],
+                      )),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
