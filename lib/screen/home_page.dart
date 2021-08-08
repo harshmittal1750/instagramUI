@@ -31,13 +31,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Expanded(
-              child: (Container(
-                child: (ListView.builder(
-                  itemBuilder: (context, index) => Post(),
-                )),
-              )),
-            ),
             Container(
               child: Post(),
             ),

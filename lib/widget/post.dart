@@ -63,17 +63,44 @@ class Post extends StatelessWidget {
                         ],
                       )),
                     ),
-                    Container(
-                      child: (Row(
-                        children: [
-                          Text("Liked by me and you"),
-                        ],
-                      )),
+                    Column(
+                      children: [
+                        Container(
+                          child: RichText(
+                            text: TextSpan(
+                                text: "Liked By",
+                                style: TextStyle(color: Colors.black),
+                                children: [
+                                  TextSpan(
+                                    text: " You ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                    text: " and ",
+                                  ),
+                                  TextSpan(
+                                    text: " me ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  )
+                                ]),
+                          ),
+                        ),
+                        Column(
+                          children: [Text("November 23 ")],
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
             ],
+          ),
+          Divider(
+            thickness: 2,
+            indent: 10,
+            endIndent: 10,
           ),
         ],
       ),
